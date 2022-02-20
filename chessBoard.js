@@ -1,3 +1,4 @@
+const abc = ["","a", "b", "c", "d", "e", "f", "g", "h", ""];
 function rows(length) {
     const res = [];
     for(let i = 0; i<length; i++) {
@@ -17,7 +18,6 @@ function columns(length) {
 }
 
 function getChessBoard(length, ind, cellClickFn) {
-    const abc = ["","a", "b", "c", "d", "e", "f", "g", "h", ""];
     return columns(length).map(j => {
        if ((ind == 0 && j != 0 && j!= (length-1))|| (ind ==(length-1) && j != 0 && j!= (length-1))) {
           return `<div class='col-1 bg-white text-dark border-white d-flex justify-content-center align-self-center' style='width: 4.5vw'>${(j)}</div>`
