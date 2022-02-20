@@ -49,7 +49,7 @@ class Chessboard {
 function myAlert(idParentEl, ind, j) {
     const al = document.getElementById(idParentEl);
     al.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
-    <strong></strong> ${abc[ind]+j}
+     ${abc[ind]+j}
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
