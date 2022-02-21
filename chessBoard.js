@@ -52,10 +52,8 @@ class Chessboard {
 }
 function myAlert(idParentEl, ind, j) {
     const al = document.getElementById(idParentEl);
-    al.innerHTML = `<div id="alert" class="alert alert-light alert-dismissible fade show p-1 mb-0" role="alert" style="height: 5vw; width: 15vw; margin-left: 5vw;">
-     ${abc[ind]+j}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="closeAlert()">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>`
+        al.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+<strong>${abc[ind]+j}</strong> 
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>`
 }
