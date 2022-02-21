@@ -35,6 +35,10 @@ function getChessBoard(length, ind, cellClickFn) {
         }
     }).join("");
 };
+function closeAlert() {
+    const alertEl = document.getElementById("alert");
+    alertEl.classList.add("d-none");
+}
 class Chessboard {
     constructor(idParent, cellClickFn) {
         this.parentElem = document.getElementById(idParent)
@@ -48,9 +52,9 @@ class Chessboard {
 }
 function myAlert(idParentEl, ind, j) {
     const al = document.getElementById(idParentEl);
-    al.innerHTML = `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    al.innerHTML = `<div id="alert" class="alert alert-light alert-dismissible fade show p-1 mb-0" role="alert" style="height: 5vw; width: 15vw; margin-left: 5vw;">
      ${abc[ind]+j}
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="closeAlert()">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>`
